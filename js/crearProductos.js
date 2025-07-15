@@ -15,10 +15,14 @@ async function obtenerPersonajes() {
             <h2>${personaje.name}</h2>  
             <p>Especie: ${personaje.species} Estado: ${personaje.status}</p>
             <p>Genero: ${personaje.gender}</p>
+            <p>Localización: ${personaje.location.name}</p>
+            <p>Origen: ${personaje.origin.name}</p>
             <button>Más información</button>
           `;
-            cardProductos.appendChild(card);
-            
+            personaje.episode.forEach(capitulo =>{
+                console.log(`${personaje.name} ${capitulo}`)
+            })
+            cardProductos.appendChild(card);           
         });
         
     } catch (error) {
